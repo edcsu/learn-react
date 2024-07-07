@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import reactImg from  "./assets/react-core-concepts.png"
 
-function App() {
-  const [count, setCount] = useState(0)
+const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
 
+function genRandomInt(max) {
+  return Math.floor(Math.random() * (max + 1));
+}
+
+function Header() {
+  const reactDescription = reactDescriptions[genRandomInt(2)]
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <header>
+        <img src={reactImg} alt="Stylized atom" />
+        <h1>React Essentials</h1>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          {reactDescription} React concepts you will need for almost any app you are
+          going to build!
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      </header>
   )
 }
 
-export default App
+function App() {
+  return (
+    <div>
+      <Header></Header>
+      <main>
+        <h2>Time to get started!</h2>
+      </main>
+    </div>
+  );
+}
+
+export default App;
