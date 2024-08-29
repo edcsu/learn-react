@@ -3,10 +3,10 @@ import { useState } from 'react';
 import Header from "./components/Header.tsx";
 import CoreConcept from "./components/CoreConcept.tsx";
 import TabButton from "./components/TabButton.tsx";
-import { CORE_CONCEPTS } from "./data.ts";
+import { CORE_CONCEPTS, EXAMPLES } from "./data.ts";
 
 function App() {
-  const [selectedTopic, setSelectedTopic] = useState('Select a tab')
+  const [selectedTopic, setSelectedTopic] = useState('components')
   function handleSelect(selectedButton: string) {
     setSelectedTopic(selectedButton)
   }
@@ -33,7 +33,15 @@ function App() {
             <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
             <TabButton onSelect={() => handleSelect('state')}>State</TabButton>
           </menu>
-          {selectedTopic}
+          <div id='tab-content'>
+            <h3>{EXAMPLES[selectedTopic].title}</h3>
+            <p>{EXAMPLES[selectedTopic].description}</p>
+            <pre>
+              <code>
+              {EXAMPLES[selectedTopic].code}
+              </code>
+            </pre>
+          </div>
         </section>
       </main>
     </div>
