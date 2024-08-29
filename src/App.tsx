@@ -5,7 +5,7 @@ import { CORE_CONCEPTS } from "./data.ts";
 
 function App() {
   function handleSelect(selectedButton: string) {
-    console.log(selectedButton + ' tab clicked')
+    console.log(`${selectedButton} tab clicked!`)
   }
 
   return (
