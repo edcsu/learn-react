@@ -3,11 +3,11 @@ import componentsImg from "./assets/components.png"
 
 const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
 
-function genRandomInt(max) {
+function genRandomInt(max: number) {
   return Math.floor(Math.random() * (max + 1));
 }
 
-function CoreConcept(props) {
+function CoreConcept(props: any) {
   return (
       <li>
         <img src={props.img} alt={props.title} />
