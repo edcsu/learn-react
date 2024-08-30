@@ -26,7 +26,7 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <Header></Header>
       <main>
         <section id="core-concepts">
@@ -35,7 +35,7 @@ function App() {
             {CORE_CONCEPTS.map((concept, index) => <CoreConcept key={index} {...concept} />)}
           </ul>
         </section>
-        <section id="examples">
+        <section id="examples"> 
           <h2>Examples</h2>
           <menu>
             <TabButton onSelect={() => handleSelect('components')} isSelected={selectedTopic === 'components'}>Components</TabButton>
@@ -46,7 +46,7 @@ function App() {
           {tabContent}
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
