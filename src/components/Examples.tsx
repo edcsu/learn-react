@@ -29,7 +29,7 @@ function Examples() {
         <Section title={'Examples'} id="examples"> 
         <Tabs
             // buttonsContainer={Menu} // For custom elements 
-            buttonsContainer="menu" 
+            // buttonsContainer="menu" 
             buttons={
             <>
                 <TabButton onClick={() => handleSelect('components')} isSelected={selectedTopic === 'components'}>Components</TabButton>
