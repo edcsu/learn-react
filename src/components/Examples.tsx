@@ -27,7 +27,10 @@ function Examples() {
     
     return (
         <Section title={'Examples'} id="examples"> 
-        <Tabs buttons={
+        <Tabs
+            // buttonsContainer={Menu} // For custom elements 
+            buttonsContainer="menu" 
+            buttons={
             <>
                 <TabButton onClick={() => handleSelect('components')} isSelected={selectedTopic === 'components'}>Components</TabButton>
                 <TabButton onClick={() => handleSelect('jsx')} isSelected={selectedTopic === 'jsx'}>JSX</TabButton>
